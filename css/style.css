@@ -5,6 +5,34 @@
   License: https://bootstrapmade.com/license/
 */
 
+.my-card-title {
+  font-weight: 500 !important;
+  font-size: 0.8rem !important;
+}
+
+.my-card-body {
+  font-size: 0.7rem !important;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.toggle-on, .toggle-off{
+  font-size: 0.75rem !important;
+  font-weight: bold;
+}
+
+.card-text{
+  margin-bottom: 10px !important;
+}
+
+.my-cards-row{
+  margin-top: 10px;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
