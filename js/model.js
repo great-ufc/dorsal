@@ -67,6 +67,12 @@ class TaxTool{
         this.appsType = [];     // class AppType
         this.categories = [];   // class Category
 
+        this.userChoice = {
+            appType: null,
+            tLang: null,
+            cats: []
+        };
+
         /* Getting applications types from spreadsheet data */
         var orderIndex = 0;
         for(var i = 9; i <= 15; i++){
@@ -136,6 +142,36 @@ class TaxTool{
         return null;
     };
 
+    clearUserChoice(){
+        this.userChoice = {
+            appType: null,
+            tLang: null,
+            cats: []
+        };
+    };
+    getUserChoice(){
+        return this.userChoice;
+    };
+    setAppTypeInUserChoice(appType){
+        var result = this.appsType.filter(at => at.id == appType);
+        if(result.length == 1){
+            this.userChoice.appType = result[0];
+        }
+    };
+    setTLangInUserChoice(language){
+        this.userChoice.tLang = language;
+    };
+    pushAllCategoriesInUserChoice(categories){
+        categories.forEach(catID => {
+            var result = this.categories.filter(cat => cat.id == catID);
+            if(result.length == 1){
+                this.userChoice.cats.push(result[0]);
+            }
+        });
+    };
+    toStringUserChoice(){
+        console.log(this.userChoice);
+    };
 }
 
 function getDataSource(){
