@@ -5,7 +5,7 @@ class AppType{
         this.orderIndex = orderIndex;
         this.description = description;
     };
-
+    
     getID() { return this.id; };
     getName() { return this.name; };
     getOrderIndex() { return this.orderIndex; };
@@ -14,6 +14,7 @@ class AppType{
 
 class Category{
     constructor(id, name, description, fields){
+        
         this.id = id;
         this.name = name;
         this.description = description;

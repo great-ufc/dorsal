@@ -1,0 +1,18 @@
+class {{=it.cname}}{
+    constructor({{=it.fnamesJoinedList}}){
+        {{~ it.fnames :field }} 
+        // {{=field.opDesc}} Field
+        this.{{=field.fname}} = {{=field.fname}};
+        {{~}}
+    };
+    
+	{{~ it.fnames :field }}
+    get{{=field.fnameC}}() {
+		return this.{{=field.fname}};
+	};
+
+	set{{=field.fnameC}}({{=field.fname}}) {
+		this.{{=field.fname}} = {{=field.fname}};
+	};
+    {{~}}
+};
