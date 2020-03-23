@@ -104,7 +104,7 @@
 
     function applyJavaTemplate(){
         Promise.all([
-            fetch('/js/templates/jclass.jst').then(template => template.text())
+            fetch('js/templates/jclass.jst').then(template => template.text())
         ]).then(([jClassTemplate]) => {
             var data = taxtool.getUserChoice();
             var tmpModel = {
