@@ -20,7 +20,7 @@ import java.util.*;
  */
 public class {{=it.cname}} {
     {{~ it.fnames :field }}
-    // {{=field.opDesc}} Field {{? field.sensorInfo != 'None'}}<br>// {{=field.sensorInfo}}{{?}}
+    // {{=field.opDesc}} Field {{? field.sensorInfo != 'None'}}<br>{{=field.sensorInfo}}{{?}}
     private {{=field.jtype}} {{=field.fname}};
     {{~}}
     {{~ it.fnames :field }}
